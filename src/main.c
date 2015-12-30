@@ -11,66 +11,31 @@
  * up the whole stack of applications upon it.
  *
  * 	Author: 	Patryk Zabkiewicz
- * 	Date:		24.12.2015
+ * 	Date:			24.12.2015
  * 	Email:		pzabkiewicz@gmail.com
  *
 */
 
 #include <stdio.h>
+#include "server.h"
+#include "version.h"
 
-typedef int int32;
-
-typedef struct jobs_ {
-	int32 id;
-	int32 name;
-	int32 time;
-	int32 schedule;
-} JOB;
-
-typedef struct job_list_ {
-	JOB job;
-	JOB *next;
-} JOB_list;
-
-void add_job_to_list(JOB_list *list, JOB *j) {
-	list->next = j;
+void print_help() {
+	printf("\n\nSolution Provider %s",version_number);
+	printf("\n\nThis software is provided by Patryk Zabkiewicz");
+	printf("\n\nAs is you can use it without any warranty");
+	printf("\n\n");
 }
 
-void server_init();
-void server_run();
-
-//
-//	main.c
-//
 int main(int argc, char *argv[]) {
 
-	// init the server
-	JOB_list *jobs_list = malloc(sizeof(JOB_list));
+	print_help();
 
 	server_init();
 
 	server_run();
 
+	server_cleanup();
+
 	return 0;
-}
-
-void server_init() {
-
-}
-
-void server_run() {
-	int quit = 1;
-	char buf[35] = {0};
-
-	do {
-		printf("solution-provider# ");
-		scanf("%s",buf);
-
-		niezalezn
-
-		if(srtcmp(buf,"")) {
-			quit = 0;
-		}
-
-	} while(quit);
 }
