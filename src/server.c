@@ -1,9 +1,21 @@
+/***************************************
+ *
+ *  Server class
+ *
+ *  Desribes how main server running
+ *
+ * 	Author: 	Patryk Zabkiewicz
+ * 	Date:		24.12.2015
+ * 	Email:		pzabkiewicz@gmail.com
+ *
+*/
+
 #include "server.h"
 
 
 void server_init() {
-  // init the server
-  JOB_list *jobs_list = malloc(sizeof(JOB_list));
+  	// init the server
+  	JOB_list * jobs_list = malloc(sizeof(JOB_list));
 
 	// read all the command mapping
 

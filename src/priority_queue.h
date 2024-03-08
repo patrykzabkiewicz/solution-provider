@@ -2,8 +2,6 @@
  *
  *  Priority queue structure
  *
- *  Desribes the main server running
- *
  * 	Author: 	Patryk Zabkiewicz
  * 	Date:		24.12.2015
  * 	Email:		pzabkiewicz@gmail.com
